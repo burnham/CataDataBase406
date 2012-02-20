@@ -36,3 +36,7 @@ UPDATE `creature` SET `spawntimesecs`='16000' WHERE `id`='50065';
 UPDATE `creature` SET `spawntimesecs`='30000' WHERE `id`='50064';
 -- Madexx (http://www.wowhead.com/npc=51404) 2 days for respawn
 UPDATE `creature` SET `spawntimesecs`='115000' WHERE `id`='51404';
+
+-- NPC: Rates NPC's are rank 2 (rare) not 1 (Elite)
+UPDATE `creature_template` SET `rank`='2' WHERE `entry` IN 
+(50138,50159,50085,50086,49822,50059,50060,50062,49913,50051,50052,50005,50065,50064,51404);

@@ -148,7 +148,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (6564982, '6564982', 0, 0, 1, 0, '');
 
 -- WP For (Karoma)
-DELETE FROM waypoint_data WHERE id='6564982' ORDER BY POINT;
+DELETE FROM waypoint_data WHERE id='6564982';
 INSERT INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `position_z`, `delay`, `move_flag`, `action`, `action_chance`, `wpguid`) VALUES 
 ('6564982','1','-3624.5','-5587.19','30.6935','0','0','0','100','0'),
 ('6564982','2','-3624.5','-5587.19','30.6935','0','0','0','100','0'),

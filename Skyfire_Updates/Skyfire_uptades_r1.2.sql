@@ -68,6 +68,15 @@ UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50052);
 UPDATE `creature_template` SET `Health_mod`='4.50' WHERE `entry` IN (50005); -- Poseidus
 UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50005);
 
+-- Ramdom pools for Karona now this npc can be respawn on 5 locs with WP inlcuded
+DELETE FROM `pool_creature` WHERE `pool_entry`='50138';
+INSERT INTO `pool_creature` VALUES
+(6564982,50138,20,'Karoma loc 1'),
+(6721,50138,20,'Karoma loc 2'),
+(6929,50138,20,'Karoma loc 3'),
+(7247,50138,20,'Karoma loc 4'),
+(7279,50138,20,'Karoma loc 5');
+
 -- ---------
 -- WayPoints
 -- ---------

@@ -40,3 +40,19 @@ UPDATE `creature` SET `spawntimesecs`='115000' WHERE `id`='51404';
 -- NPC: Rates NPC's are rank 2 (rare) not 1 (Elite)
 UPDATE `creature_template` SET `rank`='2' WHERE `entry` IN 
 (50138,50159,50085,50086,49822,50059,50060,50062,49913,50051,50052,50005,50065,50064,51404);
+
+-- NPC: Fix HP for rares creatures
+UPDATE `creature_template` SET `Health_mod`='2.00' WHERE `entry` IN (50085); -- Overlord Sunderfury
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50085);
+UPDATE `creature_template` SET `Health_mod`='1.5' WHERE `entry` IN (50086); -- Tarvus the Vile
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50086);
+UPDATE `creature_template` SET `Health_mod`='9.37' WHERE `entry` IN (49822); -- Jadefang
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (49822);
+UPDATE `creature_template` SET `Health_mod`='9.62' WHERE `entry` IN (50059); -- Golgarok
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50059);
+UPDATE `creature_template` SET `Health_mod`='109.62' WHERE `entry` IN (50051); -- Ghostcrawler
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50051);
+UPDATE `creature_template` SET `Health_mod`='4.520' WHERE `entry` IN (50052); -- Burgy Blackheart <Dreaded Captain of Diane's Fancy>
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50052);
+UPDATE `creature_template` SET `Health_mod`='4.50' WHERE `entry` IN (50005); -- Poseidus
+UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50005);

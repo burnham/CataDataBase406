@@ -141,3 +141,14 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (@ENTRY,@SOURCETYPE,0,0,9,0,100,0,1,30,1200,1300,11,75380,0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,"On Range cast: Parrrley!"),
 (@ENTRY,@SOURCETYPE,1,0,0,0,100,0,1600,1700,12000,15000,11,75361,0,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"On IC Cast: Swashbuckling Slice"),
 (@ENTRY,@SOURCETYPE,2,0,0,0,100,0,1200,1300,28000,30000,11,79414,0,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"On IC Cast: Brittle Touch");
+
+-- SAI: Poseidus
+SET @ENTRY := 50005;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,9,0,100,0,8,25,3500,4000,11,93497,0,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"On Range Cast: Bubble Charge"),
+(@ENTRY,@SOURCETYPE,1,0,0,0,100,0,1300,1500,30000,35000,11,93500,0,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"On IC Cast: Bubblebeam"),
+(@ENTRY,@SOURCETYPE,2,0,2,0,100,0,10,50,25000,30000,11,93502,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"On % HP Cast: Seascape");

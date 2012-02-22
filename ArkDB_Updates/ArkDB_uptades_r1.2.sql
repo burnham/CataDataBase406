@@ -77,6 +77,11 @@ INSERT INTO `pool_creature` VALUES
 (7247,50138,20,'Karoma loc 4'),
 (7279,50138,20,'Karoma loc 5');
 
+-- Max creature on map from Karona pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50138';
+INSERT INTO `pool_template` VALUES 
+(50138,1,'Karano - Max creature on map 1');
+
 -- ---------
 -- WayPoints
 -- ---------

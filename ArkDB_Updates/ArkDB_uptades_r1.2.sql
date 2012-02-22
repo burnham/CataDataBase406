@@ -1,5 +1,6 @@
 -- NPC
 -- WayPoints
+-- EQUIPMENTS
 -- SAI
 
 -- -----
@@ -84,6 +85,15 @@ INSERT INTO `pool_creature` VALUES
 DELETE FROM `pool_template` WHERE `entry`='50138';
 INSERT INTO `pool_template` VALUES 
 (50138,1,'Karano - Max creature on map 1');
+
+-- ------------
+-- EQUIPMENTS
+-- ------------
+-- Equipment for Thartuk the Exile
+UPDATE `creature_template` SET `equipment_id`='50053' WHERE `entry`='50053';
+DELETE FROM `creature_equip_template` WHERE (`entry`=50053);
+INSERT INTO `creature_equip_template` VALUES 
+(50053,28302,28302,0);
 
 -- ---------
 -- WayPoints

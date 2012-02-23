@@ -30,7 +30,7 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7296, 49913, 0, 1, 2, 0, 0, -5483.97, 3448.19, -42.6658, 3.42229, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 3
 (7297, 49913, 0, 1, 2, 0, 0, -5518.88, 3497.62, -82.5793, 5.77064, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 4
 (7319, 49913, 0, 1, 2, 0, 0, -5498.78, 3510.79, -128.194, 1.04568, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 5
-(7323, 50051, 0, 1, 1, 0, 0, -6189.54, 7272.39, -849.646, 5.91844, 30000, 10, 0, 0, 0, 0, 0, 0, 0, 0); -- Ghostcrawler Correct loc
+(7323, 50051, 0, 1, 1, 0, 0, -6189.54, 7272.39, -849.646, 5.91844, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0); -- Ghostcrawler Correct loc
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

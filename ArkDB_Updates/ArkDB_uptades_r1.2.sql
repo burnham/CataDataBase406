@@ -170,10 +170,10 @@ INSERT INTO `pool_template` VALUES
 -- Ramdom pools for Poseidus now this npc can be respawn on 3 locs with WP included
 DELETE FROM `pool_creature` WHERE `pool_entry`='50005';
 INSERT INTO `pool_creature` VALUES
-(7393,50005,33,'Poseidus loc 1'),
-(7373,50005,33,'Poseidus loc 2'),
-(7372,50005,34,'Poseidus loc 3'),
-(7370,50005,34,'Poseidus loc 4');
+(7393,50005,25,'Poseidus loc 1'),
+(7373,50005,25,'Poseidus loc 2'),
+(7372,50005,25,'Poseidus loc 3'),
+(7370,50005,25,'Poseidus loc 4');
 
 -- Max creature on map from Poseidus pool = 1
 DELETE FROM `pool_template` WHERE `entry`='50005';

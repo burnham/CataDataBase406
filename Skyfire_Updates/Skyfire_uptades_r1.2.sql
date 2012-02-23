@@ -7,7 +7,7 @@
 -- NPC
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
-DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247);
+DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7283);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
 (4833, 34863, 638, 1, 1, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0),
 (6716, 34863, 638, 1, 2, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0),
@@ -16,7 +16,8 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (6929, 50138, 0, 1, 2, 0, 0, -4153.15, -5887.75, 16.5117, 5.26831, 300, 0, 0, 116235, 0, 2, 0, 0, 0), -- Karona loc 3
 (7279, 50138, 0, 1, 2, 0, 0, -4810.03, -5185.29, 144.018, 0.00222874, 300, 0, 0, 116235, 0, 2, 0, 0, 0), -- Karona loc 4
 (7247, 50138, 0, 1, 2, 0, 0, -4327.02, -5246.22, 62.6014, 3.12419, 300, 0, 0, 116235, 0, 2, 0, 0, 0), -- Karona loc 5
-(7282, 50053, 1, 1, 2, 0, 0, 5056.2, -3406.46, 1615.17, 4.94876, 30000, 0, 0, 26066, 0, 0, 0, 0, 0); -- Thartuk the Exile
+(7282, 50053, 1, 1, 2, 0, 0, 5056.2, -3406.46, 1615.17, 4.94876, 30000, 0, 0, 26066, 0, 0, 0, 0, 0), -- Thartuk the Exile
+(7283, 50159, 0, 1, 2, 0, 0, -3507.24, -4515.68, 153.017, 4.74318, 300, 0, 0, 116235, 0, 0, 0, 0, 0); -- Sambas loc 3
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

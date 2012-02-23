@@ -153,8 +153,8 @@ UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `id`='50009';
 -- Xariona Correct inhabittype to show fly animation and correct speed
 UPDATE `creature_template` SET `InhabitType`='5', speed_run='2.0' WHERE `entry`='50061';
 
--- Mobus Correct inhabittype to dont fall into ground when die
-UPDATE `creature_template` SET `InhabitType`='4' WHERE `entry`='50009';
+-- Mobus Correct better way to avoid jumps and better speed 
+UPDATE `creature_template` SET `InhabitType`='7', speed_walk='3.1' WHERE `entry`='50009';
 
 -- Low guid for Mobus spawn
 UPDATE `creature` SET `guid`='7321' WHERE `guid`='15409922' AND `id`='50009';

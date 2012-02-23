@@ -123,6 +123,9 @@ UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812'
 -- Golgarok No movement for this NPC have a WP
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593456';
 
+-- Xariona No movement for this NPC have a WP
+UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6592940';
+
 -- ------------
 -- EQUIPMENTS
 -- ------------

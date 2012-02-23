@@ -89,6 +89,20 @@ DELETE FROM `pool_template` WHERE `entry`='50138';
 INSERT INTO `pool_template` VALUES 
 (50138,1,'Karano - Max creature on map 1');
 
+-- Ramdom pools for Sambas now this npc can be respawn on 5 locs with WP inlcuded
+DELETE FROM `pool_creature` WHERE `pool_entry`='50159';
+INSERT INTO `pool_creature` VALUES
+(6578730,50159,20,'Sambas loc 1'),
+(6565424,50159,20,'Sambas loc 2'),
+(7287,50159,20,'Sambas loc 3'),
+(7285,50159,20,'Sambas loc 4'),
+(7283,50159,20,'Sambas loc 5');
+
+-- Max creature on map from Sambas pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50159';
+INSERT INTO `pool_template` VALUES 
+(50159,1,'Sambas - Max creature on map 1');
+
 -- ------------
 -- EQUIPMENTS
 -- ------------

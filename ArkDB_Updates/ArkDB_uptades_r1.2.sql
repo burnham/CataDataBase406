@@ -106,6 +106,9 @@ INSERT INTO `pool_template` VALUES
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
 
+-- Golgarok No movement for this NPC have a WP
+UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593456';
+
 -- ------------
 -- EQUIPMENTS
 -- ------------

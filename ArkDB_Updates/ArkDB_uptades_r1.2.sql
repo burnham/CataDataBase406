@@ -7,7 +7,8 @@
 -- NPC
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
-DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289);
+DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
+7295,7296,7297,7319);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`DeathState`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
 (4833, 34863, 638, 1, 1, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0, 0),
 (6716, 34863, 638, 1, 2, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0, 0),
@@ -21,7 +22,12 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7285, 50159, 0, 1, 2, 0, 0, -3229.37, -4723.61, 125.277, 4.48714, 300, 0, 0, 116235, 0, 0, 0, 0, 0, 0), -- Sambas loc 4
 (7287, 50159, 0, 1, 2, 0, 0, -2883.58, -4998.72, 159.382, 3.26349, 300, 0, 0, 116235, 0, 0, 0, 0, 0, 0), -- Sambas loc 5
 (7288, 50059, 646, 1, 2, 0, 0, -213.854, 836.844, 216.175, 6.02346, 300, 0, 0, 134151, 0, 0, 0, 0, 0, 0), -- Golgarok loc 2
-(7289, 50059, 646, 1, 2, 0, 0, 219.497, 1213.04, 248.366, 2.24883, 300, 0, 0, 134151, 0, 0, 0, 0, 0, 0); -- Golgarok loc 3
+(7289, 50059, 646, 1, 2, 0, 0, 219.497, 1213.04, 248.366, 2.24883, 300, 0, 0, 134151, 0, 0, 0, 0, 0, 0), -- Golgarok loc 3
+(7291, 49913, 0, 1, 2, 0, 0, -5457.67, 3446.13, -124.069, 1.04882, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 1
+(7295, 49913, 0, 1, 1, 0, 0, -5441.84, 3370.32, -98.8213, 0.166815, 9500, 0, 0, 24790, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 2
+(7296, 49913, 0, 1, 2, 0, 0, -5483.97, 3448.19, -42.6658, 3.42229, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 3
+(7297, 49913, 0, 1, 2, 0, 0, -5518.88, 3497.62, -82.5793, 5.77064, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 4
+(7319, 49913, 0, 1, 2, 0, 0, -5498.78, 3510.79, -128.194, 1.04568, 300, 0, 0, 26066, 0, 0, 0, 0, 0, 0); -- Lady La-La <Siren of the Deeps> loc 5
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

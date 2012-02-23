@@ -8,7 +8,7 @@
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
 DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
-7295,7296,7297,7319,7323,7324,7325,7369,7393,7373,7372,7370,6598271;
+7295,7296,7297,7319,7323,7324,7325,7369,7393,7373,7372,7370,6598271,7394,7395,7396,7399);
 -- Ghostcrawler only is one spawn rest is a WP so deleted all spawn and do correct spawn loc and WP
 DELETE FROM `creature` WHERE `id` IN (50051,50005);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
@@ -37,7 +37,11 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7393, 50005, 0, 1, 2, 0, 0, -6841.04, 4628.94, -572.828, 5.68409, 300, 0, 0, 56700, 0, 0, 0, 0, 0), -- Poseidus loc 1
 (7373, 50005, 0, 1, 2, 0, 0, -7481.18, 3882.87, -207.606, 0.224785, 300, 0, 0, 56700, 0, 0, 0, 0, 0), -- Poseidus loc 2
 (7372, 50005, 0, 1, 2, 0, 0, -6078.93, 3615.56, -439.25, 0.55465, 300, 0, 0, 56700, 0, 0, 0, 0, 0), -- Poseidus loc 3
-(7370, 50005, 0, 1, 2, 0, 0, -6302.12, 4487.75, -638.493, 2.20635, 300, 0, 0, 58649, 0, 0, 0, 0, 0); -- Poseidus loc 4
+(7370, 50005, 0, 1, 2, 0, 0, -6302.12, 4487.75, -638.493, 2.20635, 300, 0, 0, 58649, 0, 0, 0, 0, 0), -- Poseidus loc 4
+(7394, 50064, 1, 1, 1, 0, 0, -10516.1, -1154.87, 43.276, 0.12763, 30000, 0, 0, 63, 0, 0, 0, 0, 0), -- Cyrus the Black loc 1
+(7395, 50064, 1, 1, 2, 0, 0, -10852.3, -1674.78, 10.1719, 5.45498, 300, 0, 0, 96467, 7995, 0, 0, 0, 0), -- Cyrus the Black loc 2
+(7396, 50064, 1, 1, 2, 0, 0, -11073.6, -1971.12, 9.7103, 2.32124, 300, 0, 0, 96467, 7995, 0, 0, 0, 0), -- Cyrus the Black loc 3
+(7399, 50064, 1, 1, 2, 0, 0, -11397.5, -1253.61, 2.14475, 1.21226, 300, 0, 0, 96467, 7995, 0, 0, 0, 0); -- Cyrus the Black loc 4
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

@@ -8,7 +8,7 @@
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
 DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
-7295,7296,7297,7319,7323,7324,7325,7369);
+7295,7296,7297,7319,7323,7324,7325,7369,7393,7373,7372,7370);
 -- Ghostcrawler only is one spawn rest is a WP so deleted all spawn and do correct spawn loc and WP
 DELETE FROM `creature` WHERE `id` IN (50051,50005);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`DeathState`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
@@ -33,7 +33,11 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7323, 50051, 0, 1, 1, 0, 0, -6189.54, 7272.39, -849.646, 5.91844, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0), -- Ghostcrawler Correct loc
 (7324, 50050, 0, 1, 2, 0, 0, -5937.15, 6345.46, -1011.56, 1.97179, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0), --  Shok'sharak loc 1
 (7325, 50050, 0, 1, 2, 0, 0, -5773.88, 6258.27, -911.415, 5.14872, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0), --  Shok'sharak loc 2
-(7369, 50050, 0, 1, 2, 0, 0, -5803.5, 6467.49, -777.06, 3.48761, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0);  -- Shok'sharak loc 3
+(7369, 50050, 0, 1, 2, 0, 0, -5803.5, 6467.49, -777.06, 3.48761, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0),  -- Shok'sharak loc 3
+(7393, 50005, 0, 1, 2, 0, 0, -6841.04, 4628.94, -572.828, 5.68409, 300, 0, 0, 56700, 0, 0, 0, 0, 0, 0), -- Poseidus loc 1
+(7373, 50005, 0, 1, 2, 0, 0, -7481.18, 3882.87, -207.606, 0.224785, 300, 0, 0, 56700, 0, 0, 0, 0, 0, 0), -- Poseidus loc 2
+(7372, 50005, 0, 1, 2, 0, 0, -6078.93, 3615.56, -439.25, 0.55465, 300, 0, 0, 56700, 0, 0, 0, 0, 0, 0), -- Poseidus loc 3
+(7370, 50005, 0, 1, 2, 0, 0, -6302.12, 4487.75, -638.493, 2.20635, 300, 0, 0, 58649, 0, 0, 0, 0, 0, 0); -- Poseidus loc 4
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

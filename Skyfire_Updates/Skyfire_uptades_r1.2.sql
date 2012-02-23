@@ -8,7 +8,7 @@
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
 DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
-7295,7296,7297,7319);
+7295,7296,7297,7319,7323);
 -- Ghostcrawler only is one spawn rest is a WP so deleted all spawn and do correct spawn loc and WP
 DELETE FROM `creature` WHERE `id`=50051;
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
@@ -29,8 +29,8 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7295, 49913, 0, 1, 1, 0, 0, -5441.84, 3370.32, -98.8213, 0.166815, 9500, 0, 0, 24790, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 2
 (7296, 49913, 0, 1, 2, 0, 0, -5483.97, 3448.19, -42.6658, 3.42229, 300, 0, 0, 26066, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 3
 (7297, 49913, 0, 1, 2, 0, 0, -5518.88, 3497.62, -82.5793, 5.77064, 300, 0, 0, 26066, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 4
-(7319, 49913, 0, 1, 2, 0, 0, -5498.78, 3510.79, -128.194, 1.04568, 300, 0, 0, 26066, 0, 0, 0, 0, 0); -- Lady La-La <Siren of the Deeps> loc 5
-
+(7319, 49913, 0, 1, 2, 0, 0, -5498.78, 3510.79, -128.194, 1.04568, 300, 0, 0, 26066, 0, 0, 0, 0, 0), -- Lady La-La <Siren of the Deeps> loc 5
+(7323, 50051, 0, 1, 1, 0, 0, -6189.54, 7272.39, -849.646, 5.91844, 30000, 10, 0, 0, 0, 0, 0, 0, 0, 0); -- Ghostcrawler Correct loc
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

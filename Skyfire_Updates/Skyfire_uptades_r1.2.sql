@@ -145,6 +145,18 @@ DELETE FROM `pool_template` WHERE `entry`='49913';
 INSERT INTO `pool_template` VALUES 
 (49913,1,'Lady La-La <Siren of the Deeps> - Max creature on map 1');
 
+-- Ramdom pools for Shok'sharak now this npc can be respawn on 3 locs
+DELETE FROM `pool_creature` WHERE `pool_entry`='50050';
+INSERT INTO `pool_creature` VALUES
+(7369,50050,33,'Shok\'sharak loc 1'),
+(7325,50050,33,'Shok\'sharak loc 2'),
+(7324,50050,34,'Shok\'sharak loc 3');
+
+-- Max creature on map from Golgarok pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50050';
+INSERT INTO `pool_template` VALUES 
+(50050,1,'Shok\'sharak - Max creature on map 1');
+
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
 

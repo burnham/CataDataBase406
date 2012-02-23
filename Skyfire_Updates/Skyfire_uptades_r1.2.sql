@@ -91,6 +91,32 @@ DELETE FROM `pool_template` WHERE `entry`='50138';
 INSERT INTO `pool_template` VALUES 
 (50138,1,'Karano - Max creature on map 1');
 
+-- Ramdom pools for Sambas now this npc can be respawn on 5 locs with WP inlcuded
+DELETE FROM `pool_creature` WHERE `pool_entry`='50159';
+INSERT INTO `pool_creature` VALUES
+(6578730,50159,20,'Sambas loc 1'),
+(6565424,50159,20,'Sambas loc 2'),
+(7287,50159,20,'Sambas loc 3'),
+(7285,50159,20,'Sambas loc 4'),
+(7283,50159,20,'Sambas loc 5');
+
+-- Max creature on map from Sambas pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50159';
+INSERT INTO `pool_template` VALUES 
+(50159,1,'Sambas - Max creature on map 1');
+
+-- Ramdom pools for Golgarok now this npc can be respawn on 3 locs with WP inlcuded
+DELETE FROM `pool_creature` WHERE `pool_entry`='50059';
+INSERT INTO `pool_creature` VALUES
+(6593456,50059,33,'Golgarok loc 1'),
+(7289,50059,33,'Golgarok loc 2'),
+(7288,50059,34,'Golgarok loc 3');
+
+-- Max creature on map from Golgarok pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50059';
+INSERT INTO `pool_template` VALUES 
+(50059,1,'Sambas - Max creature on map 1');
+
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
 

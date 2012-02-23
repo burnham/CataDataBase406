@@ -161,6 +161,19 @@ DELETE FROM `pool_template` WHERE `entry`='50050';
 INSERT INTO `pool_template` VALUES 
 (50050,1,'Shok\'sharak - Max creature on map 1');
 
+-- Ramdom pools for Poseidus now this npc can be respawn on 3 locs with WP included
+DELETE FROM `pool_creature` WHERE `pool_entry`='50005';
+INSERT INTO `pool_creature` VALUES
+(7393,50005,33,'Poseidus loc 1'),
+(7373,50005,33,'Poseidus loc 2'),
+(7372,50005,34,'Poseidus loc 3'),
+(7370,50005,34,'Poseidus loc 4');
+
+-- Max creature on map from Poseidus pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50005';
+INSERT INTO `pool_template` VALUES 
+(50005,1,'Poseidus - Max creature on map 1');
+
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
 

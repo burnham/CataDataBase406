@@ -10,7 +10,7 @@
 DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
 7295,7296,7297,7319,7323,7324,7325,7369);
 -- Ghostcrawler only is one spawn rest is a WP so deleted all spawn and do correct spawn loc and WP
-DELETE FROM `creature` WHERE `id`=50051;
+DELETE FROM `creature` WHERE `id` IN (50051,50005);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
 (4833, 34863, 638, 1, 1, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0),
 (6716, 34863, 638, 1, 2, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0),

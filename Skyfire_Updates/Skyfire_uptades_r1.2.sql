@@ -8,7 +8,7 @@
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
 DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
-7295,7296,7297,7319,7323,7324,7325,7369,7393,7373,7372,7370);
+7295,7296,7297,7319,7323,7324,7325,7369,7393,7373,7372,7370,6598271;
 -- Ghostcrawler only is one spawn rest is a WP so deleted all spawn and do correct spawn loc and WP
 DELETE FROM `creature` WHERE `id` IN (50051,50005);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
@@ -70,6 +70,8 @@ UPDATE `creature` SET `spawntimesecs`='16000' WHERE `id`='50065';
 UPDATE `creature` SET `spawntimesecs`='30000' WHERE `id`='50064';
 -- Madexx (http://www.wowhead.com/npc=51404) 2 days for respawn
 UPDATE `creature` SET `spawntimesecs`='115000' WHERE `id`='51404';
+-- Shok'sharak (http://www.wowhead.com/npc=50050) 16 hours for respawn
+UPDATE `creature` SET `spawntimesecs`='59500' WHERE `id`='50050';
 
 -- NPC: Rates NPC's are rank 2 (rare) not 1 (Elite)
 UPDATE `creature_template` SET `rank`='2' WHERE `entry` IN 

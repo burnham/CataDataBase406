@@ -123,6 +123,20 @@ DELETE FROM `pool_template` WHERE `entry`='50059';
 INSERT INTO `pool_template` VALUES 
 (50059,1,'Sambas - Max creature on map 1');
 
+-- Ramdom pools for Lady La-La <Siren of the Deeps> now this npc can be respawn on 3 locs with WP inlcuded
+DELETE FROM `pool_creature` WHERE `pool_entry`='49913';
+INSERT INTO `pool_creature` VALUES
+(7319,49913,20,'Lady La-La <Siren of the Deeps> loc 1'),
+(7297,49913,20,'Lady La-La <Siren of the Deeps> loc 2'),
+(7296,49913,20,'Lady La-La <Siren of the Deeps> loc 3'),
+(7295,49913,20,'Lady La-La <Siren of the Deeps> loc 4'),
+(7291,49913,20,'Lady La-La <Siren of the Deeps> loc 5');
+
+-- Max creature on map from Lady La-La <Siren of the Deeps> pool = 1
+DELETE FROM `pool_template` WHERE `entry`='49913';
+INSERT INTO `pool_template` VALUES 
+(49913,1,'Lady La-La <Siren of the Deeps> - Max creature on map 1');
+
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
 

@@ -7,7 +7,7 @@
 -- NPC
 -- -----
 -- Lieutenant Walden miss correct phases on 1 and 2
-DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287);
+DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
 (4833, 34863, 638, 1, 1, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0),
 (6716, 34863, 638, 1, 2, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0),
@@ -19,7 +19,8 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7282, 50053, 1, 1, 2, 0, 0, 5056.2, -3406.46, 1615.17, 4.94876, 30000, 0, 0, 26066, 0, 0, 0, 0, 0), -- Thartuk the Exile
 (7283, 50159, 0, 1, 2, 0, 0, -3507.24, -4515.68, 153.017, 4.74318, 300, 0, 0, 116235, 0, 0, 0, 0, 0), -- Sambas loc 3
 (7285, 50159, 0, 1, 2, 0, 0, -3229.37, -4723.61, 125.277, 4.48714, 300, 0, 0, 116235, 0, 0, 0, 0, 0), -- Sambas loc 4
-(7287, 50159, 0, 1, 2, 0, 0, -2883.58, -4998.72, 159.382, 3.26349, 300, 0, 0, 116235, 0, 0, 0, 0, 0); -- Sambas loc 4
+(7287, 50159, 0, 1, 2, 0, 0, -2883.58, -4998.72, 159.382, 3.26349, 300, 0, 0, 116235, 0, 0, 0, 0, 0), -- Sambas loc 4
+(7288, 50059, 646, 1, 2, 0, 0, -213.854, 836.844, 216.175, 6.02346, 300, 0, 0, 134151, 0, 0, 0, 0, 0); -- Golgarok loc 2
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

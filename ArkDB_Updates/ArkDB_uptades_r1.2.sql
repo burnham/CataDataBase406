@@ -146,6 +146,9 @@ UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593456'
 -- Xariona No movement for this NPC have a WP
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6592940';
 
+-- Mobus No movement for this NPC have a WP
+UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `id`='50009';
+
 -- Xariona Correct inhabittype to show fly animation and correct speed
 UPDATE `creature_template` SET `InhabitType`='5', speed_run='2.0' WHERE `entry`='50061';
 

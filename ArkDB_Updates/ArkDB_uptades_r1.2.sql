@@ -155,6 +155,9 @@ UPDATE `creature_template` SET `InhabitType`='5', speed_run='2.0' WHERE `entry`=
 -- Mobus Correct inhabittype to dont fall into ground when die
 UPDATE `creature_template` SET `InhabitType`='4' WHERE `entry`='50009';
 
+-- Low guid for Mobus spawn
+UPDATE `creature` SET `guid`='7321' WHERE `guid`='15409922' AND `id`='50009';
+
 -- ------------
 -- EQUIPMENTS
 -- ------------

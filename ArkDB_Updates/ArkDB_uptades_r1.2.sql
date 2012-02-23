@@ -70,6 +70,8 @@ UPDATE `creature` SET `spawntimesecs`='16000' WHERE `id`='50065';
 UPDATE `creature` SET `spawntimesecs`='30000' WHERE `id`='50064';
 -- Madexx (http://www.wowhead.com/npc=51404) 2 days for respawn
 UPDATE `creature` SET `spawntimesecs`='115000' WHERE `id`='51404';
+-- Shok'sharak (http://www.wowhead.com/npc=50050) 16 hours for respawn
+UPDATE `creature` SET `spawntimesecs`='59500' WHERE `id`='50050';
 
 -- NPC: Rates NPC's are rank 2 (rare) not 1 (Elite)
 UPDATE `creature_template` SET `rank`='2' WHERE `entry` IN 

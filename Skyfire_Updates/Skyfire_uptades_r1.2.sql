@@ -89,6 +89,9 @@ DELETE FROM `pool_template` WHERE `entry`='50138';
 INSERT INTO `pool_template` VALUES 
 (50138,1,'Karano - Max creature on map 1');
 
+-- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
+UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
+
 -- ------------
 -- EQUIPMENTS
 -- ------------

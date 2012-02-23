@@ -103,6 +103,9 @@ DELETE FROM `pool_template` WHERE `entry`='50159';
 INSERT INTO `pool_template` VALUES 
 (50159,1,'Sambas - Max creature on map 1');
 
+-- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
+UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
+
 -- ------------
 -- EQUIPMENTS
 -- ------------

@@ -180,6 +180,19 @@ DELETE FROM `pool_template` WHERE `entry`='50005';
 INSERT INTO `pool_template` VALUES 
 (50005,1,'Poseidus - Max creature on map 1');
 
+-- Ramdom pools for Cyrus the Black now this npc can be respawn on 4 locs
+DELETE FROM `pool_creature` WHERE `pool_entry`='50064';
+INSERT INTO `pool_creature` VALUES
+(7399,50064,25,'Cyrus the Black loc 1'),
+(7396,50064,25,'Cyrus the Black loc 2'),
+(7395,50064,25,'Cyrus the Black loc 3'),
+(7394,50064,25,'Cyrus the Black loc 4');
+
+-- Max creature on map from Cyrus the Black pool = 1
+DELETE FROM `pool_template` WHERE `entry`='50064';
+INSERT INTO `pool_template` VALUES 
+(50064,1,'Cyrus the Black - Max creature on map 1');
+
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';
 

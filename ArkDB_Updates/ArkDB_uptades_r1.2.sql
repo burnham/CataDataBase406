@@ -216,6 +216,8 @@ UPDATE `creature_template` SET `InhabitType`='7' WHERE `entry`='50005';
 
 -- Low guid for Mobus spawn
 UPDATE `creature` SET `guid`='7321' WHERE `guid`='15409922' AND `id`='50009';
+-- Low guid for Madexx spawn
+UPDATE `creature` SET `guid`='7442' WHERE `guid`='6597645' AND `id`='51404';
 
 -- ------------
 -- EQUIPMENTS

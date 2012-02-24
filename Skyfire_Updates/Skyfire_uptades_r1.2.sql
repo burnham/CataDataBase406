@@ -142,7 +142,7 @@ INSERT INTO `pool_creature` VALUES
 -- Max creature on map from Golgarok pool = 1
 DELETE FROM `pool_template` WHERE `entry`='50059';
 INSERT INTO `pool_template` VALUES 
-(50059,1,'Sambas - Max creature on map 1');
+(50059,1,'Golgarok - Max creature on map 1');
 
 -- Ramdom pools for Lady La-La <Siren of the Deeps> now this npc can be respawn on 3 locs with WP inlcuded
 DELETE FROM `pool_creature` WHERE `pool_entry`='49913';
@@ -165,7 +165,7 @@ INSERT INTO `pool_creature` VALUES
 (7325,50050,33,'Shok\'sharak loc 2'),
 (7324,50050,34,'Shok\'sharak loc 3');
 
--- Max creature on map from Golgarok pool = 1
+-- Max creature on map from Shok'sharak pool = 1
 DELETE FROM `pool_template` WHERE `entry`='50050';
 INSERT INTO `pool_template` VALUES 
 (50050,1,'Shok\'sharak - Max creature on map 1');
@@ -195,6 +195,19 @@ INSERT INTO `pool_creature` VALUES
 DELETE FROM `pool_template` WHERE `entry`='50064';
 INSERT INTO `pool_template` VALUES 
 (50064,1,'Cyrus the Black - Max creature on map 1');
+
+-- Ramdom pools for Madexx now this npc can be respawn on 4 locs with WP included
+DELETE FROM `pool_creature` WHERE `pool_entry`='51404';
+INSERT INTO `pool_creature` VALUES
+(7442,51404,25,'Madexx loc 1'),
+(7443,51404,25,'Madexx loc 2'),
+(7450,51404,25,'Madexx loc 3'),
+(7478,51404,25,'Madexx loc 4');
+
+-- Max creature on map from Cyrus the Black pool = 1
+DELETE FROM `pool_template` WHERE `entry`='51404';
+INSERT INTO `pool_template` VALUES 
+(51404,1,'Madexx - Max creature on map 1');
 
 -- Jadefang No movement for this NPC to avoid go into the wall (anywway is not moving on official)
 UPDATE `creature` SET `spawndist`='0', `MovementType`='0' WHERE `guid`='6593812';

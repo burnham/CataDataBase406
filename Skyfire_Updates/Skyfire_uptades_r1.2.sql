@@ -1,4 +1,5 @@
 -- NPC
+-- Quest
 -- WayPoints
 -- EQUIPMENTS
 -- SAI
@@ -234,6 +235,12 @@ UPDATE `creature_template` SET `InhabitType`='7' WHERE `entry`='50005';
 UPDATE `creature` SET `guid`='7321' WHERE `guid`='15409922' AND `id`='50009';
 -- Low guid for Madexx spawn
 UPDATE `creature` SET `guid`='7442' WHERE `guid`='6597645' AND `id`='51404';
+
+-- -----
+-- Quest
+-- -----
+-- QUEST: Evacuate the Merchant Square (http://www.wowhead.com/quest=14098) wrogn phase 4 on this quest, so now all quest and phases are ok
+UPDATE `quest_template` SET `RewSpellHiddenCast`='0' WHERE `entry`='14098';
 
 -- ------------
 -- EQUIPMENTS

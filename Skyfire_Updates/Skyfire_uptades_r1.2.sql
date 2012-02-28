@@ -7011,3 +7011,118 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (@ENTRY,@SOURCETYPE,1,0,0,0,100,0,3500,4000,55000,60000,11,93546,0,0,0,0,0,5,0,0,0,0.0,0.0,0.0,0.0,"On IC Cast: Twilight Fissure"),
 (@ENTRY,@SOURCETYPE,2,0,2,0,100,0,50,50,25000,30000,11,93553,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"On 50% HP Cast: Twilight Zone"),
 (@ENTRY,@SOURCETYPE,3,0,0,0,100,0,4000,4500,60000,70000,11,93556,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"On Ic Cast: Unleashed Magic");
+
+-- ---------
+-- Gilneas 
+-- --------
+-- Gilneas City Guard Remove Scriptname now is handled by SAI
+UPDATE `creature_template` SET `ScriptName`='' WHERE `entry`='34864';
+
+-- SAI: Gilneas City Guard
+SET @ENTRY := 34864;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,34884,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1"),
+(@ENTRY,@SOURCETYPE,1,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,50471,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- Rampaging Worgen Remove Scriptname now is handled by SAI
+UPDATE `creature_template` SET `ScriptName`='' WHERE `entry`='34884';
+
+-- SAI: Rampaging Worgen
+SET @ENTRY := 34884;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,34864,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Bloodfang Worgen Better way to spawn emote when need it
+SET @ENTRY := 35118;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,0,0,0,0,8,1,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Only attack when attacked"),
+(@ENTRY,@SOURCETYPE,1,0,2,0,100,0,5,10,2000,3000,11,8599,1,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Bloodfang Worgen"),
+(@ENTRY,@SOURCETYPE,2,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,35232,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Gilnean Royal Guard Phase 2 SAI for spawn emote
+SET @ENTRY := 35232;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,35118,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- Gilnean Royal Guard wrong ID on phase 2, now are playing correct emote
+UPDATE `creature` SET `id`='35232' WHERE `id`='34864' AND `guid`='5100';
+
+-- SAI: Afflicted Gilnean Better way to spawn emote when need it
+SET @ENTRY := 50471;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,0,0,0,0,8,1,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Only attack when attacked"),
+(@ENTRY,@SOURCETYPE,1,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,34864,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1"),
+(@ENTRY,@SOURCETYPE,2,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,100001,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Gilneas City Guard Better way to spawn emote when need it
+SET @ENTRY := 100001;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,1,0,100,150,200,250,1,0,500,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,"Gilneas City Guard - Talk"),
+(@ENTRY,@SOURCETYPE,1,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,50471,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Bloodfang Stalker Better way to spawn emote when need it
+SET @ENTRY := 51277;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,2,0,100,0,5,20,7000,8000,11,8599,1,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Bloodfang Stalker"),
+(@ENTRY,@SOURCETYPE,1,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,36057,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Northgate Rebel Better way to spawn emote when need it
+SET @ENTRY := 36057;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,0,0,100,0,100,400,600,800,11,59146,1,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"Northgate Rebel"),
+(@ENTRY,@SOURCETYPE,1,0,0,0,100,0,800,1000,1200,1400,11,21390,1,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"Northgate Rebel"),
+(@ENTRY,@SOURCETYPE,2,0,0,0,100,0,1300,2000,2200,2900,11,15496,1,0,0,0,0,2,0,0,0,0.0,0.0,0.0,0.0,"Northgate Rebel"),
+(@ENTRY,@SOURCETYPE,3,0,2,0,100,0,40,70,3000,3400,11,61044,1,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Northgate Rebel"),
+(@ENTRY,@SOURCETYPE,4,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,51277,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Frenzied Stalker Better way to spawn emote when need it
+SET @ENTRY := 35627;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,0,0,0,0,8,1,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Only attack when attacked"),
+(@ENTRY,@SOURCETYPE,1,0,2,0,100,0,5,10,2000,3000,11,8599,1,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Frenzied Stalke"),
+(@ENTRY,@SOURCETYPE,2,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,41015,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");
+
+-- SAI: Northgate Rebel Better way to spawn emote when need it
+SET @ENTRY := 41015;
+SET @SOURCETYPE := 0;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=@SOURCETYPE;
+UPDATE creature_template SET AIName="SmartAI" WHERE entry=@ENTRY LIMIT 1;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES 
+(@ENTRY,@SOURCETYPE,0,0,1,0,100,0,1200,1300,1400,1500,5,36,0,0,0,0,0,11,35627,2,0,0.0,0.0,0.0,0.0,"On OCC emote: Attack H1");

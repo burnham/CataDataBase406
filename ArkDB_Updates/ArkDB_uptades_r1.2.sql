@@ -11,7 +11,7 @@
 DELETE FROM `creature` WHERE `guid` IN (4833,6716,6565507,6721,6929,7279,7247,7282,7283,7285,7287,7288,7289,15426566,7291,
 7295,7296,7297,7319,7323,7324,7325,7369,7393,7373,7372,7370,6598271,7394,7395,7396,7399,7443,7450,7478);
 -- Ghostcrawler only is one spawn rest is a WP so deleted all spawn and do correct spawn loc and WP
-DELETE FROM `creature` WHERE `id` IN (50051,50005);
+DELETE FROM `creature` WHERE `id` IN (50051,50005,12759);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`DeathState`,`MovementType`,`npcflag`,`unit_flags`,`dynamicflags`) VALUES
 (4833, 34863, 638, 1, 1, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0, 0),
 (6716, 34863, 638, 1, 2, 0, 0, -1405.52, 1445.8, 35.5562, 2.99158, 600, 0, 0, 42, 0, 0, 0, 0, 0, 0),
@@ -45,7 +45,8 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (7399, 50064, 1, 1, 2, 0, 0, -11397.5, -1253.61, 2.14475, 1.21226, 300, 0, 0, 96467, 7995, 0, 0, 0, 0, 0), -- Cyrus the Black loc 4
 (7443, 51404, 1, 1, 2, 0, 0, -9005.52, -316.161, 141.837, 5.20209, 300, 0, 0, 96467, 0, 0, 0, 0, 0, 0), -- Madexx loc 2
 (7450, 51404, 1, 1, 2, 0, 0, -8798.76, -936.068, 173.707, 1.0277, 300, 0, 0, 96467, 0, 0, 0, 0, 0, 0), -- Madexx loc 3
-(7478, 51404, 1, 1, 2, 0, 0, -8879.35, -679.558, 169.293, 4.23606, 300, 0, 0, 96467, 0, 0, 0, 0, 0, 0); -- Madexx loc 4
+(7478, 51404, 1, 1, 2, 0, 0, -8879.35, -679.558, 169.293, 4.23606, 300, 0, 0, 96467, 0, 0, 0, 0, 0, 0), -- Madexx loc 4
+(34224, 12759, 1, 1, 1, 29278, 12759, 1992.23, -1080.66, 98.2062, 6.24828, 600, 10, 0, 915, 655, 0, 1, 0, 0, 0); -- Tideress
 
 -- Elites and rare npcs need special respawn
 -- Karoma (http://www.wowhead.com/npc=50138) 7 hours for respawn

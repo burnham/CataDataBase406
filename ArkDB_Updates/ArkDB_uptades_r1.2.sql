@@ -107,6 +107,10 @@ UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50053);
 UPDATE `creature_template` SET `Health_mod`='5.70' WHERE `entry` IN (50050); -- Shok'sharak
 UPDATE `creature` SET `curhealth`='0' WHERE `id` IN (50050);
 
+-- Sneed's Shredder Correct HP 
+UPDATE `creature_template` SET `Health_mod`='2.9' WHERE `entry`='643';
+
+
 -- Ramdom pools for Karona now this npc can be respawn on 5 locs with WP inlcuded
 DELETE FROM `pool_creature` WHERE `pool_entry`='50138';
 INSERT INTO `pool_creature` VALUES

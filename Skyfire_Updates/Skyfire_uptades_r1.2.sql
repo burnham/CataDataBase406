@@ -238,6 +238,10 @@ UPDATE `creature` SET `guid`='7321' WHERE `guid`='15409922' AND `id`='50009';
 -- Low guid for Madexx spawn
 UPDATE `creature` SET `guid`='7442' WHERE `guid`='6597645' AND `id`='51404';
 
+-- NPC: Foulweald Pathfinder & Foulweald Totemic wrong flags
+-- This NPC can be attacable
+UPDATE `creature_template` SET `unit_flags` ='0', `dynamicflags`='8' WHERE entry IN (3745,3750);
+
 -- ------
 -- ADDONS
 -- ------

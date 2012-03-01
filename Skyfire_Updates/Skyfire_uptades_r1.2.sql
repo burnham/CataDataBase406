@@ -1,4 +1,5 @@
 -- NPC
+-- ADDONS
 -- Quest
 -- WayPoints
 -- EQUIPMENTS
@@ -236,6 +237,11 @@ UPDATE `creature_template` SET `InhabitType`='7' WHERE `entry`='50005';
 UPDATE `creature` SET `guid`='7321' WHERE `guid`='15409922' AND `id`='50009';
 -- Low guid for Madexx spawn
 UPDATE `creature` SET `guid`='7442' WHERE `guid`='6597645' AND `id`='51404';
+
+-- ------
+-- ADDONS
+-- ------
+DELETE FROM `creature_addon` WHERE `guid` IN (267175);
 
 -- -----
 -- Quest

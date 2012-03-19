@@ -8062,3 +8062,7 @@ UPDATE `creature` SET `guid`='22124', `id`='35317', `map`='638', `spawnMask`='1'
 UPDATE `creature` SET `guid`='22126', `id`='35317', `map`='638', `spawnMask`='1', `phaseMask`='1024', `modelid`='0', `equipment_id`='0', `position_x`='-1546.62', `position_y`='1595.42', `position_z`='26.5364', `orientation`='1.68616', `spawntimesecs`='300', `spawndist`='0', `currentwaypoint`='0', `curhealth`='9880', `curmana`='0', `DeathState`='0', `MovementType`='0', `npcflag`='0', `unit_flags`='0', `dynamicflags`='0'  WHERE (`guid` = 15459634);
 UPDATE `creature` SET `guid`='22127', `id`='35317', `map`='638', `spawnMask`='1', `phaseMask`='1024', `modelid`='0', `equipment_id`='0', `position_x`='-1521.56', `position_y`='1572.56', `position_z`='26.5361', `orientation`='0.0949418', `spawntimesecs`='300', `spawndist`='0', `currentwaypoint`='0', `curhealth`='9880', `curmana`='0', `DeathState`='0', `MovementType`='0', `npcflag`='0', `unit_flags`='0', `dynamicflags`='0'  WHERE (`guid` = 15459638);
 REPLACE INTO `creature` VALUES ('22128', '5450', '1', '1', '1', '3194', '5450', '-9040.78', '-3844.25', '15.9989', '3.7918', '300', '0', '0', '1919', '0', '0', '0', '0', '0', '0');
+
+-- Addons
+REPLACE INTO `creature_addon` VALUES ('134940', '1349400', '0', '0', '1', '0', '');
+DELETE FROM `creature_addon`  WHERE (`guid` = 322528) ;
